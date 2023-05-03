@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felvillanyozódás</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-bottom: 40px">Felvillanyozódás</h1>
+
+    <hr width="60%" color="black" size="3" />
+
+    <div style="text-align: center; margin-bottom: 40px">
+      <h2>A játék leírása</h2>
+      A királynak négyzet alapú szobái vannak, amelyek fekete és fehér cellákból
+      állnak. A fehér cellákba villanykörtéket lehet elhelyezni. A
+      villanykörtékből a fény átlósan nem terjed, csak az adott sor és oszlop
+      mentén. A fekete cellákon valamilyen tereptárgy van, ami akadályozza a
+      fény terjedését. A fekete cellák opcionálisan egy egész számot is
+      tartalmazhatnak 0-tól 4-ig. Ez azt jelzi, hogy hány szomszédos (alul,
+      felül, jobbra, balra) cella tartalmaz villanykörtét. Ha van ilyen szám,
+      akkor be kell tartani! Két villanykörte soha nem világíthatja meg egymást!
+      A játék célja a villanykörtéket úgy elhelyezni, hogy minden fehér cellát
+      megvilágítsanak.
+    </div>
+
+    <hr width="60%" color="black" size="3" />
+
+    <div id="jatekosNeve">
+      <h2 id="jatekosNeveKiir"></h2>
+      <button id="ujNevmegadasBtn">Új név megadása</button>
+    </div>
+
+    <div id="ujJatekosNev">
+      <h2>Új név:</h2>
+      <input type="text" id="jatekosNeveInp" />
+      <button id="jatekosNeveMentes">Mentés</button>
+    </div>
+
+    <div id="palyaValaszto">
+      <h2>Válassz pályát:</h2>
+      <ul>
+        <li><img src="img/palya1.png" id="palya1" /></li>
+        <li><img src="img/palya2.png" id="palya2" /></li>
+        <li><img src="img/palya3.png" id="palya3" /></li>
+      </ul>
+
+      <hr width="60%" color="black" size="3" />
+
+      <div id="mentettJatekokDiv">
+        <h3></h3>
+      </div>
+
+      <div id="legutobbiEredmenyek">
+        <h3></h3>
+      </div>
+    </div>
+
+    <div id="jatekTer">
+      <br />
+      <div style="text-align: center">
+        <button id="startGameBtn">Start</button><br>
+        <button id="visszaPalyavalaszohozBtn">Vissza a főoldalra</button>
+      </div>
+      <button id="newGameBtn">Új játék</button>
+      <button id="jatekMenteseBtn">Játék megszakítása és állás mentése</button>
+      <h3>Eltelt idő: <span id="idoKiiras">0:00</span></h3>
+      <div id="gyozelemResz"></div>
+    </div>
+
+    <script src="play.js"></script>
+  </body>
+</html>
